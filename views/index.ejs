@@ -1,16 +1,17 @@
-<table border="1">
-    <tr>
-      <th>ID</th>
-      <th>Title</th>
-      <th>Due Date</th>
-      <th>Is Completed?</th>
-    </tr>
-    <% for(let i=0;i<allTodos.length; i++) { %>
-      <tr>
-        <td><%= allTodos[i].id %></td>
-        <td><%= allTodos[i].title %></td>
-        <td><%= allTodos[i].dueDate %></td>
-        <td><%= allTodos[i].completed %></td>
-      </tr>
-    <% } %>
-  </table>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinay Todo Manager</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <!-- for reuse the created common ejs file like header and footer  -->
+    <%- include("header.ejs") %>
+    <%- include("todos.ejs") %> 
+    <%- include("footer.ejs") %>
+  </body>
+</html>
